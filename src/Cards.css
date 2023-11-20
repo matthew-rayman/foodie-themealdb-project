@@ -1,0 +1,24 @@
+.icon {
+    z-index: -1;
+    transition: z-index 0.2s;
+  }
+  
+ .parent:hover .icon {
+    transition-delay: 0.2s; 
+    z-index: 1;
+  }
+  
+  .parent:hover .image {
+    opacity: 0.9;
+    transform: scale(1.04);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  
+  .parent .image {
+    transition: opacity 0.4s, transform 0.4s;
+  }
+  
+  .parent:hover .image {
+    transition-delay: 0.2s; /* Delay the transition after the hover effect */
+  }
+  
