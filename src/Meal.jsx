@@ -1,7 +1,9 @@
 import Cards from './Cards';
+import Footer1 from './Footer1';
 import Navbar from './Navbar';
 import { StateContextCustomHook } from './assets/StateContext/StateContext';
 import { CiCircleChevDown } from "react-icons/ci";
+
 
 
 const Meal = () => {
@@ -16,14 +18,17 @@ const Meal = () => {
       ):(
         <div>
          <Navbar/>
-      <div className='flex animate__animated animate__fadeInUp animate__slow flex-wrap gap-3 mt-9 container mx-auto justify-center'>
+      <div className='  flex animate__animated animate__fadeInUp animate__slow flex-wrap md:gap-4 gap-[14px] md:mt-9 md:mb-4 mb-4  mt-4  container mx-auto justify-center'>
       {meals.map(meal =>{
         return(
           <Cards  key={meal.idMeal} name={meal.strMeal} image={meal.strMealThumb} id={meal.idMeal}/>
         )
       })}
     </div>
-    </div> )}
+   <Footer1/>
+    </div> 
+    
+    )}
     </div>
   )
 }

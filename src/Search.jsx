@@ -25,13 +25,13 @@ const Search = () => {
   return (
     <div>
       {isLoading?(
-        <div className='flex flex-col items-center justify-center h-screen'>
+        <div className='flex flex-col items-center justify-center bg-[#2d2013] h-screen'>
           <LuLoader className=' w-14 p-2 h-14 animate-spin text-orange'/>
         </div>
       ):(
         <div>
         <Navbar/>
-        <div className='flex animate__animated animate__slideInUp flex-wrap ms-[20px] my-[40px] justify-evenly'>
+        <div className='flex animate__animated animate__slideInUp flex-wrap  py-[40px] justify-evenly'>
          {meals.map(meal =>{
           return(
           <Cards  key={meal.idMeal} name={meal.strMeal} image={meal.strMealThumb} id={meal.idMeal}/>
